@@ -1,0 +1,29 @@
+.fullDate {
+  color: gray;
+  width: 30%;
+  text-align: center;
+}
+
+.middleText {
+  color: gray;
+  width: 30%;
+  text-align: center;
+}
+
+.rightText {
+  color: gray;
+  width: 30%;
+  text-align: center;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.divider {
+  width: 0.2%;
+  height: 30px; /* Altura da barra vertical */
+  background-color: rgb(192, 185, 185);
+}
