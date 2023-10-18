@@ -1,0 +1,11 @@
+.title-container {
+  border-top: 7px solid black;
+  border-bottom: 7px solid black;
+  text-align: center;
+}
+
+.title {
+  font-size: 100px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
