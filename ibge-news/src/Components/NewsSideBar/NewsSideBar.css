@@ -1,0 +1,18 @@
+.container__sideBar {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.container__sideBar > hr {
+  width: 100%;
+  border: 2px solid rgba(128, 128, 128, 0.363);
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}

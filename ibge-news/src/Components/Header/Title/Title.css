@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Trispace:wght@100&display=swap');
+
 .title-container {
-  border-top: 7px solid black;
-  border-bottom: 7px solid black;
+  border-top: 1px solid black;
+  border-bottom: 5px solid black;
   text-align: center;
+  background-image: url('https://previews.123rf.com/images/sergiobarrios/sergiobarrios1504/sergiobarrios150400072/38517914-world-newspapers-detail-of-newspapers-with-news-information-and-reading.jpg');
 }
 
 .title {
-  font-size: 50px;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  font-size: 10vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  color: black;
+  text-shadow: 10px 7px 1px rgba(250, 235, 215, 0.726);
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 7px;
 }

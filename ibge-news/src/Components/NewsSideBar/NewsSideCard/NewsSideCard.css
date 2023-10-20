@@ -1,0 +1,12 @@
+.newsSideCard {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.newsSideCard > img {
+  border: 5px solid rgba(0, 0, 0, 0.253);
+  border-radius: 17px;
+}

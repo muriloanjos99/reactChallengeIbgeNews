@@ -1,0 +1,32 @@
+.menu-button {
+  height: 3vh;
+  background-color: gray;
+  border: 0;
+  margin-right: 8vh;
+  margin-left: 8vh;
+  font-size: 2vh;
+  text-underline-offset: 0.7vh;
+}
+
+.active {
+  color: black; /* Cor diferente quando o botão é clicado */
+  text-decoration: underline solid antiquewhite 3px;
+  font-size: 2.2vh;
+}
+
+.active > button {
+  font-size: 100px;
+}
+
+.menuBar {
+  margin-top: 6vh;
+  display: flex;
+  width: 150vh;
+  height: 5vh;
+  background-color: gray;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.356);
+  margin-bottom: 5vh;
+}

@@ -1,0 +1,23 @@
+.container__main-card {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  height: 80%;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.main-card__title {
+  margin-top: -2%;
+}
+
+.main-card__image {
+  display: flex;
+  border: 7px solid rgba(0, 0, 0, 0.267);
+  border-radius: 17px;
+}
+
+.main-card__image > img {
+  border-radius: 10px;
+}
