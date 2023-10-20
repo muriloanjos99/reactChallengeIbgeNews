@@ -13,20 +13,20 @@ function MainCard() {
     if (globalState.data !== null) {
       setData(globalState.data.items[0]);
     }
-  })
+  });
 
   useEffect(() => {
     if (data !== null) {
       const ibgeUrl = 'https://agenciadenoticias.ibge.gov.br/';
       const fullImageUrl = ibgeUrl + (JSON.parse(data.imagens?.replace(/\\/g, '')).image_intro);
-      setImageUrl(fullImageUrl)
+      setImageUrl(fullImageUrl);
     }
-  }, [data])
+  }, [data]);
 
   return (
     <div className="container__main-card">
       <div className="main-card__image">
-        <img src={imageUrl} alt="" height="250px"/>
+        <img src={ imageUrl } alt="" height="250px" />
       </div>
       <div className="main-card__title">
         <h2>{data ? data.titulo : 'Título'}</h2>
@@ -35,7 +35,7 @@ function MainCard() {
         <p>{data ? data.introducao : 'Título'}</p>
       </div>
     </div>
-  )
+  );
 }
 
 export default MainCard;

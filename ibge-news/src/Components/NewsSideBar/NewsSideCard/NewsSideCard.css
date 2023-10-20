@@ -1,12 +1,68 @@
-.newsSideCard {
+.container__newsSideCard {
   display: flex;
-  width: 100%;
   flex-direction: row;
-  justify-content: space-evenly;
+}
+.newsSideCard__image {
+  width: 70vh;
+  display: flex;
+  width: 40%;
   align-items: center;
+  justify-content: center;
 }
 
-.newsSideCard > img {
+.newsSideCard__image > img {
+  display: flex;
   border: 5px solid rgba(0, 0, 0, 0.253);
   border-radius: 17px;
+}
+
+.newsSideCard__title {
+  display: flex;
+  width: 40vh;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.newsSideCard__title > h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.newsSideCard__link {
+  display: flex;
+  width: 42vh;
+  justify-content: center;
+}
+
+.newsSideCard__link > button {
+  border: 0;
+  width: 10vh;
+  height: 3vh;
+  background-color: rgb(212, 200, 184);
+  transition: background-color 0.3s;
+  border-radius: 1vh;
+}
+
+.newsSideCard__link > button > a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6vh;
+}
+
+.newsSideCard__link > button:hover {
+  background-color: antiquewhite;
+  transition: background-color 0.3s;
+}
+
+.container__titleLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vh;
 }

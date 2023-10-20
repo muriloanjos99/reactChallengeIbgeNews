@@ -14,27 +14,60 @@
   height: 35vh;
 }
 
+.container__news-card > hr {
+  margin-top: 1vh;
+}
+
 .news-card__content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .news-card__content > h3 {
   margin-bottom: 1.5vh;
+  text-align: center;
 }
 
 .news-card__content > p {
   margin-bottom: 1.5vh;
+  text-align: justify;
 }
 
 .news-card__buttons {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  margin-top: 1vh;
+}
+
+.news-card__linkButton > a {
+  text-decoration: none;
+  color: black;
+}
+
+.news-card__linkButton {
+  border-radius: 1vh;
+  width: 20vh;
+  height: 4vh;
+  background-color: rgb(212, 200, 184);
+}
+
+.news-card__linkButton:hover {
+  border-radius: 1vh;
+  width: 20vh;
+  height: 4vh;
 }
 
 hr {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.news-card__favButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer; /* Adicione isso para mostrar que é clicável */
 }

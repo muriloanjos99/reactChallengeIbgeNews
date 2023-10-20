@@ -1,10 +1,9 @@
-import { DataType, FavType } from "../../Utils/types";
+import { DataType, FavType } from '../../Utils/types';
 
-export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
-export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
-export const  ADD_FAVORITE = "ADD_FAVORITE";
-export const  REMOVE_FAVORITE = "REMOVE_FAVORITE";
-
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE';
+export const ADD_FAVORITE = 'ADD_FAVORITE';
+export const REMOVE_FAVORITE = 'REMOVE_FAVORITE';
 
 export interface FetchDataSuccessAction {
   type: typeof FETCH_DATA_SUCCESS;

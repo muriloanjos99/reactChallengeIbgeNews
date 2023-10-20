@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  width: 100%;
+  width: 183vh;
   top: 3.1vh;
-  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.2); /* Aumente a espessura e reduza o desfoque para uma sombra mais visível */
+  box-shadow: 0vh 15px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container__OutletContent {

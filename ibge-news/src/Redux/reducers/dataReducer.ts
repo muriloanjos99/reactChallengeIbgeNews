@@ -1,6 +1,5 @@
-// dataReducer.ts
-import * as actionTypes from "../actions/actionTypes";
-import * as types from "../../Utils/types";
+import * as actionTypes from '../actions/actionTypes';
+import * as types from '../../Utils/types';
 
 export interface DataState {
   data: types.DataType | null;
@@ -16,7 +15,7 @@ const initialState: DataState = {
 
 const dataReducer = (
   state: DataState = initialState,
-  action: actionTypes.DataActionTypes
+  action: actionTypes.DataActionTypes,
 ): DataState => {
   switch (action.type) {
     case actionTypes.ADD_FAVORITE:
@@ -27,8 +26,8 @@ const dataReducer = (
     case actionTypes.REMOVE_FAVORITE:
       return {
         ...state,
-        favNews: state.favNews.filter(news => news.link !== action.payload.link),
-      };  
+        favNews: state.favNews.filter((news) => news.link !== action.payload.link),
+      };
     case actionTypes.FETCH_DATA_SUCCESS:
       return {
         ...state,

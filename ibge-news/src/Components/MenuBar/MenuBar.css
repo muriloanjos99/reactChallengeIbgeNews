@@ -2,13 +2,12 @@
   height: 3vh;
   background-color: gray;
   border: 0;
-
   font-size: 2vh;
   text-underline-offset: 0.7vh;
 }
 
 .active {
-  color: black; /* Cor diferente quando o botão é clicado */
+  color: black;
   text-decoration: underline solid antiquewhite 3px;
   font-size: 2.2vh;
 }
@@ -18,7 +17,6 @@
 }
 
 .menuBar {
-  margin-top: 6vh;
   display: flex;
   width: 150vh;
   height: 5vh;

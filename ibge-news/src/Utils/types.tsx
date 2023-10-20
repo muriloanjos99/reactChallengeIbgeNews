@@ -24,17 +24,6 @@ export interface DataType {
   totalPages: number;
 }
 
-export interface DataType {
-  count: number;
-  items: ItemType[];
-  nextPage: number;
-  page: number;
-  previousPage: number;
-  showingFrom: number;
-  showingTo: number;
-  totalPages: number;
-}
-
 export interface FavType {
   titulo: string;
   introducao: string;

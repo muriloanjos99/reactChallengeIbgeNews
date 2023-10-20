@@ -1,6 +1,6 @@
 .container__allCards {
   display: flex;
-  height: 500px;
+  height: 65vh;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -30,12 +30,30 @@
   width: 50%;
 }
 
+.container__pageButtons > button > img {
+  display: flex;
+}
+
+.container__pageButtons > button {
+  display: flex;
+  background-color: #EFEFEF;
+}
+
 .container__pageButtons > h2 {
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: 3vh;
+  background-color: #EFEFEF;
 }
 
 .disable__pageButtons {
   display: none;
+}
+
+.container__menuBar {
+  margin-top: 2vh;
+}
+
+.container__newsCards > h2 {
+  margin-bottom: 10vh;
 }

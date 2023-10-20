@@ -1,11 +1,11 @@
 import './Title.css';
 
 function Title() {
-  return(
+  return (
     <div className="title-container">
-      <h1 className='title'>IBGE News</h1>
+      <h1 className="title">IBGE News</h1>
     </div>
-  )
+  );
 }
 
 export default Title;

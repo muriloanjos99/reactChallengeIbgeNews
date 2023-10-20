@@ -1,15 +1,15 @@
-import Title from "./Title/Title";
-import TopBar from "./TopBar/TopBar";
+import Title from './Title/Title';
+import TopBar from './TopBar/TopBar';
 
-import './Header.css'
+import './Header.css';
 
 function Header() {
-  return(
+  return (
     <div className="header">
       <TopBar />
       <Title />
     </div>
-  )
+  );
 }
 
 export default Header;

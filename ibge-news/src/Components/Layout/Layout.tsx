@@ -1,10 +1,10 @@
-import { Outlet } from "react-router-dom";
-import Header from "../Header/Header";
+import { Outlet } from 'react-router-dom';
+import Header from '../Header/Header';
 
 import './Layout.css';
 
 function Layout() {
-  return(
+  return (
     <div className="container__HeaderOutlet">
       <div className="container__Header">
         <Header />
@@ -13,7 +13,7 @@ function Layout() {
         <Outlet />
       </div>
     </div>
-  )
+  );
 }
 
 export default Layout;

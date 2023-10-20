@@ -1,29 +1,38 @@
-import { useEffect } from 'react';
 import './NewsSideCard.css';
-import { ItemType } from '../../../Redux/actions/actionTypes';
+import { useEffect, useState } from 'react';
+import { ItemType } from '../../../Utils/types';
 
 interface SideCardProps {
-  image: string;
   data: ItemType;
 }
 
 function NewsCard(props: SideCardProps) {
-  const {image, data} = props;
-  useEffect(() => {
-    console.log();
-  })
+  const { data } = props;
+  const { imagens, titulo, link } = data;
 
-  return(
+  const [imageUrl, setImageUrl] = useState<string>();
+
+  useEffect(() => {
+    const ibgeUrl = 'https://agenciadenoticias.ibge.gov.br/';
+    const fullImageUrl = ibgeUrl + (JSON.parse(imagens.replace(/\\/g, '')).image_intro);
+    setImageUrl(fullImageUrl);
+  }, [data, imagens]);
+
+  return (
     <div className="container__newsSideCard">
-      <div className='newsSideCard__content'>
-        <img src={image} alt="" height="105vh" />
-        <h3>{data?.titulo}</h3>
+      <div className="newsSideCard__image">
+        <img src={ imageUrl } alt="" width="190vh" />
       </div>
-      <div className='newsSideCard__link'>
-        <button>Leia mais</button>
+      <div className="container__titleLink">
+        <div className="newsSideCard__title">
+          <h3>{titulo}</h3>
+        </div>
+        <div className="newsSideCard__link">
+          <button><a href={ link } target="_blank" rel="noreferrer">Leia mais</a></button>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default NewsCard;

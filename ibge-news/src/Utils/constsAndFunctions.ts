@@ -1,0 +1,3 @@
+export function capitalizeFirstLetter(date: string) {
+  return date.charAt(0).toUpperCase() + date.slice(1);
+}
