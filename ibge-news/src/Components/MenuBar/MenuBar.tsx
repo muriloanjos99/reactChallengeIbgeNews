@@ -3,7 +3,7 @@ import { useState } from "react";
 import './MenuBar.css';
 
 function MenuBar() {
-  const [activeButton, setActiveButton] = useState<string>('0'); // Estado para armazenar o botão ativo
+  const [activeButton, setActiveButton] = useState<string>('0');
   
   const handleButtonClick = (buttonclassName: string) => {
     setActiveButton(buttonclassName);
