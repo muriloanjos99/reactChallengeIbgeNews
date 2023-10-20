@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { DataState } from '../../Redux/reducers/dataReducer';
 import store from '../../Redux/store/dataStore';
 import './MainCard.css';
-import { ItemType } from '../../Redux/actions/actionTypes';
+import { ItemType } from '../../Utils/types';
 
 function MainCard() {
   const [data, setData] = useState<ItemType | null>(null);

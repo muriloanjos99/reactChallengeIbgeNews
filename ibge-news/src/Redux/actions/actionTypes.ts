@@ -1,36 +1,10 @@
-export const FETCH_DATA_REQUEST = "FETCH_DATA_REQUEST";
+import { DataType, FavType } from "../../Utils/types";
+
 export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
 export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
+export const  ADD_FAVORITE = "ADD_FAVORITE";
+export const  REMOVE_FAVORITE = "REMOVE_FAVORITE";
 
-export interface ItemType {
-  id: number;
-  tipo: string;
-  titulo: string;
-  introducao: string;
-  data_publicacao: string;
-  produto_id: number;
-  produtos: string;
-  editorias: string;
-  imagens: string;
-  produtos_relacionados: string;
-  destaque: boolean;
-  link: string;
-}
-
-export interface DataType {
-  count: number;
-  items: ItemType[];
-  nextPage: number;
-  page: number;
-  previousPage: number;
-  showingFrom: number;
-  showingTo: number;
-  totalPages: number;
-}
-
-export interface FetchDataRequestAction {
-  type: typeof FETCH_DATA_REQUEST;
-}
 
 export interface FetchDataSuccessAction {
   type: typeof FETCH_DATA_SUCCESS;
@@ -42,7 +16,18 @@ export interface FetchDataFailureAction {
   payload: string;
 }
 
+export interface AddFavoriteAction {
+  type: typeof ADD_FAVORITE;
+  payload: FavType;
+}
+
+export interface RemoveFavoriteAction {
+  type: typeof REMOVE_FAVORITE;
+  payload: FavType;
+}
+
 export type DataActionTypes =
-  | FetchDataRequestAction
+  | RemoveFavoriteAction
+  | AddFavoriteAction
   | FetchDataSuccessAction
   | FetchDataFailureAction;

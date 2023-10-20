@@ -2,8 +2,7 @@
   height: 3vh;
   background-color: gray;
   border: 0;
-  margin-right: 8vh;
-  margin-left: 8vh;
+
   font-size: 2vh;
   text-underline-offset: 0.7vh;
 }
@@ -25,7 +24,7 @@
   height: 5vh;
   background-color: gray;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 10px;
   box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.356);
   margin-bottom: 5vh;
