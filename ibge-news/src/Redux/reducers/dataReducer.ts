@@ -1,13 +1,13 @@
 // dataReducer.ts
 import * as actionTypes from "../actions/actionTypes";
 
-interface DataState {
-  data: actionTypes.DataType[];
+export interface DataState {
+  data: actionTypes.DataType | null;
   error: string | null;
 }
 
 const initialState: DataState = {
-  data: [],
+  data: null,
   error: null,
 };
 

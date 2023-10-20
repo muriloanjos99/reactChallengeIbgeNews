@@ -7,7 +7,7 @@ import NewsDetails from './Pages/NewsDetails/NewsDetails'
 
 import './App.css'
 import { useDispatch } from 'react-redux'
-import { fetchDataSuccess } from './actions/dataActions'
+import { fetchDataSuccess } from './Redux/actions/dataActions'
 
 function App() {
   const dispatch = useDispatch();

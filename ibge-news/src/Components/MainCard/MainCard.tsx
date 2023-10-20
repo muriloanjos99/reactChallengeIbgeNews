@@ -1,16 +1,38 @@
+import { useEffect, useState } from 'react';
+import { DataState } from '../../Redux/reducers/dataReducer';
+import store from '../../Redux/store/dataStore';
 import './MainCard.css';
+import { ItemType } from '../../Redux/actions/actionTypes';
 
 function MainCard() {
+  const [data, setData] = useState<ItemType | null>(null);
+  const [imageUrl, setImageUrl] = useState<string>('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png');
+
+  store.subscribe(() => {
+    const globalState: DataState = store.getState();
+    if (globalState.data !== null) {
+      setData(globalState.data.items[0]);
+    }
+  })
+
+  useEffect(() => {
+    if (data !== null) {
+      const ibgeUrl = 'https://agenciadenoticias.ibge.gov.br/';
+      const fullImageUrl = ibgeUrl + (JSON.parse(data.imagens?.replace(/\\/g, '')).image_intro);
+      setImageUrl(fullImageUrl)
+    }
+  }, [data])
+
   return (
     <div className="container__main-card">
       <div className="main-card__image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png" alt="" height="250px" />
+        <img src={imageUrl} alt="" height="250px"/>
       </div>
       <div className="main-card__title">
-        <h2>TEST TITLE</h2>
+        <h2>{data ? data.titulo : 'Título'}</h2>
       </div>
       <div className="main-card__description">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut laboriosam nam qui aspernatur, cum laborum. Repellendus beatae perferendis minus fuga culpa voluptatum voluptates iste officia incidunt deserunt soluta, fugiat quisquam.</p>
+        <p>{data ? data.introducao : 'Título'}</p>
       </div>
     </div>
   )

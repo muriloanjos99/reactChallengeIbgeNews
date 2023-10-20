@@ -2,7 +2,7 @@ export const FETCH_DATA_REQUEST = "FETCH_DATA_REQUEST";
 export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
 export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
 
-export interface DataType {
+export interface ItemType {
   id: number;
   tipo: string;
   titulo: string;
@@ -11,19 +11,21 @@ export interface DataType {
   produto_id: number;
   produtos: string;
   editorias: string;
-  imagens: {
-    image_intro: string;
-    float_intro: string;
-    image_intro_alt: string;
-    image_intro_caption: string;
-    image_fulltext: string;
-    float_fulltext: string;
-    image_fulltext_alt: string;
-    image_fulltext_caption: string;
-  };
+  imagens: string;
   produtos_relacionados: string;
   destaque: boolean;
   link: string;
+}
+
+export interface DataType {
+  count: number;
+  items: ItemType[];
+  nextPage: number;
+  page: number;
+  previousPage: number;
+  showingFrom: number;
+  showingTo: number;
+  totalPages: number;
 }
 
 export interface FetchDataRequestAction {
@@ -32,7 +34,7 @@ export interface FetchDataRequestAction {
 
 export interface FetchDataSuccessAction {
   type: typeof FETCH_DATA_SUCCESS;
-  payload: DataType[];
+  payload: DataType;
 }
 
 export interface FetchDataFailureAction {

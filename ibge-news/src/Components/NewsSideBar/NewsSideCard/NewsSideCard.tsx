@@ -1,10 +1,27 @@
+import { useEffect } from 'react';
 import './NewsSideCard.css';
+import { ItemType } from '../../../Redux/actions/actionTypes';
 
-function NewsCard() {
+interface SideCardProps {
+  image: string;
+  data: ItemType;
+}
+
+function NewsCard(props: SideCardProps) {
+  const {image, data} = props;
+  useEffect(() => {
+    console.log();
+  })
+
   return(
-    <div className="newsSideCard">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png" alt="" height="105vh" />
-      <h3>asdasd</h3>
+    <div className="container__newsSideCard">
+      <div className='newsSideCard__content'>
+        <img src={image} alt="" height="105vh" />
+        <h3>{data?.titulo}</h3>
+      </div>
+      <div className='newsSideCard__link'>
+        <button>Leia mais</button>
+      </div>
     </div>
   )
 }
