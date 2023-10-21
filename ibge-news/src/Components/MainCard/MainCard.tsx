@@ -34,6 +34,11 @@ function MainCard() {
       <div className="main-card__description">
         <p>{data ? data.introducao : 'Título'}</p>
       </div>
+      <button>
+        <a href={ data?.link }>
+          Leia mais
+        </a>
+      </button>
     </div>
   );
 }
